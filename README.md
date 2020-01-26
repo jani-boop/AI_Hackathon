@@ -12,9 +12,9 @@ So submit a pull request within the stipulated time along with a readme file tha
 
 
 
-# Team_Name 
+# Genesis
 
 ## XYZ
-- [a](https://github.com/a)
-- [b](https://github.com/b)
-- [c](https://github.com/c)
+- [Sivaramakrishnan SK](https://github.com/sk124)
+- [Tejasvi S Tomar](https://github.com/tejasvi)
+- open[](https://github.com/)
