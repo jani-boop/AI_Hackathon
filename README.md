@@ -23,6 +23,7 @@ So submit a pull request within the stipulated time along with a readme file tha
 ## Team Schwifty
 - [Abhilash Reddy](https://github.com/abhilashreddys)
 - [Kousik Rajesh](https://github.com/kousikr26)
+- [Rashi]
 
 ## Genesis
 - [Sivaramakrishnan SK](https://github.com/sk124)
