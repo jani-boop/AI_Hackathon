@@ -12,9 +12,31 @@ So submit a pull request within the stipulated time along with a readme file tha
 
 
 
-# Genesis
 
-## XYZ
+
+
+
+## Genesis
 - [Sivaramakrishnan SK](https://github.com/sk124)
 - [Tejasvi S Tomar](https://github.com/tejasvi)
-- open[](https://github.com/)
+
+## SMS
+- sai krishna(https://github.com/themendu)
+- Manoj(https://github.com/manojpaidimarri21)
+- Sravya(https://github.com/sravya27082001)
+
+## GEEKZONE
+- [Bishal Kumar Shaw](https://github.com/bishal1212)
+- [Vishal Goyal](https://github.com/b)
+- [Pratyush Roy](https://github.com/c)
+
+## Intelliqo
+- [Eshwar Nukala](https://github.com/eshwar28)
+- [Neeraja J](https://github.com/jayne228)
+- [Shrey Jani](https://github.com/jani-boop)
+
+## Matrix Agents
+- [Aadi](https://github.com/aadig15)
+- [Animesh](https://github.com/animeshrdso)
+- [Dibyakanti](https://github.com/Dibyakanti)
+
