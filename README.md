@@ -9,6 +9,12 @@ So submit a pull request within the stipulated time along with a readme file tha
 2. Then find a relevant dataset(It may be small but that is where transfer learning becomes important)
 3. Use a suitable model and apply the learnings
 
+## Marking_Scheme
+1. Novelty       40%
+2. Dataset_used  20%
+3. DL techniques 20%
+4. Code Quality  20%
+
 
 
 # Team_Name
