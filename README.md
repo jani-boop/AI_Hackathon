@@ -5,7 +5,9 @@ The rules for AI Hackathon will be updated shortly
 
 # Team_Name 
 
+SMS
+
 ## XYZ
-- [a](https://github.com/a)
-- [b](https://github.com/b)
-- [c](https://github.com/c)
+- sai krishna(https://github.com/themendu)
+- Manoj(https://github.com/manojpaidimarri21)
+- Sravya(https://github.com/sravya27082001)
