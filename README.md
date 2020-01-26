@@ -12,12 +12,13 @@ So submit a pull request within the stipulated time along with a readme file tha
 
 
 
-# Team_Name 
 
-## XYZ
-- [a](https://github.com/a)
-- [b](https://github.com/b)
-- [c](https://github.com/c)
+
+
+
+## Genesis
+- [Sivaramakrishnan SK](https://github.com/sk124)
+- [Tejasvi S Tomar](https://github.com/tejasvi)
 
 ## SMS
 - sai krishna(https://github.com/themendu)
@@ -38,5 +39,4 @@ So submit a pull request within the stipulated time along with a readme file tha
 - [Aadi](https://github.com/aadig15)
 - [Animesh](https://github.com/animeshrdso)
 - [Dibyakanti](https://github.com/Dibyakanti)
-
 
