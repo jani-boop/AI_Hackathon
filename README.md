@@ -20,6 +20,12 @@ So submit a pull request within the stipulated time along with a readme file tha
 # Team_Name
 ## Members
 
+
+
+## Aztecs
+- [Shridhar Hegde](https://github.com/shridharrhegde)
+- [Sayan Sarkar](https://github.com/alpha99991)
+
 ## Team Schwifty
 - [Abhilash Reddy](https://github.com/abhilashreddys)
 - [Kousik Rajesh](https://github.com/kousikr26)
