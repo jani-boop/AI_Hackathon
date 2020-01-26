@@ -15,10 +15,16 @@ So submit a pull request within the stipulated time along with a readme file tha
 # Team_Name 
 
 
+
 ## XYZ
 - [a](https://github.com/a)
 - [b](https://github.com/b)
 - [c](https://github.com/c)
+
+## GEEKZONE
+- [Bishal Kumar Shaw](https://github.com/bishal1212)
+- [Vishal Goyal](https://github.com/b)
+- [Pratyush Roy](https://github.com/c)
 
 ## Intelliqo
 - [Eshwar Nukala](https://github.com/eshwar28)
