@@ -14,12 +14,15 @@ So submit a pull request within the stipulated time along with a readme file tha
 
 # Team_Name 
 
-
-
 ## XYZ
 - [a](https://github.com/a)
 - [b](https://github.com/b)
 - [c](https://github.com/c)
+
+## SMS
+- sai krishna(https://github.com/themendu)
+- Manoj(https://github.com/manojpaidimarri21)
+- Sravya(https://github.com/sravya27082001)
 
 ## GEEKZONE
 - [Bishal Kumar Shaw](https://github.com/bishal1212)
@@ -35,4 +38,5 @@ So submit a pull request within the stipulated time along with a readme file tha
 - [Aadi](https://github.com/aadig15)
 - [Animesh](https://github.com/animeshrdso)
 - [Dibyakanti](https://github.com/Dibyakanti)
+
 
