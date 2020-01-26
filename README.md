@@ -16,7 +16,7 @@ Some key pointers:
 - [b](https://github.com/b)
 - [c](https://github.com/c)
 
-## XYZ
-- [a](https://github.com/)
-- [b](https://github.com/b)
-- [c](https://github.com/c)
+## GEEKZONE
+- [Bishal Kumar Shaw](https://github.com/bishal1212)
+- [Vishal Goyal](https://github.com/b)
+- [Pratyush Roy](https://github.com/c)
