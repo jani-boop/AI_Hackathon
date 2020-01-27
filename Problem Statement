@@ -1,4 +1,5 @@
 #NIH Chest X-rays
+#Multi - Label classification of 14 different diseases diagonised by chest X-ray images.
 
 Dataset is taken from a kaggle.   
 Source -- https://www.kaggle.com/nih-chest-xrays/data
