@@ -1,52 +1,75 @@
 # Media Description Generator
 When AI turns journalist
-
+https://drive.google.com/open?id=1JJG2-gYKEV-EtBzlzdFjLU_jKTUWDhFK
+https://colab.research.google.com/drive/197PbtRyc89vw9HmlNFjj6Bhi6nozoCnq
+**NEW LINK FOR CSV TRANSFORMS**
+https://colab.research.google.com/drive/1kNTOH2rIp9U9NIr19Mae4CrMEcet3fme
 ## Purpose
 
 * Making information more accessible to people with disability.
-     *Use case:* Providing descriptive facts from ambient sounds to the hearing-impaired.
-
-* Unbaised reporting will get more relevant as the trend of [microtargeting](https://en.wikipedia.org/wiki/Microtargeting) rises.
-    *Use case:* A standard repository of facts which is supported by every news outlet.
-
+     *Use case:* Providing descriptive facts from ambient sounds to the hearing-impaired. 
+     
+* Providing unbaised reporting while it gets more relevant in the trend of [microtargeting](https://en.wikipedia.org/wiki/Microtargeting).
+    *Use case:* A standard repository of facts which form the basis of all news outlets.
+    
+* Richer subtitle generation for non-speech sounds.
+    *Use case:* Streaming
+     
 * Obataining relevant facts from a large swaths of data which is otherwise resource intensive for humans.
     *Use case:* Detecting unusual activity in lengthy surveillance media for security.
-
-* Archival of hefty media in an extremely compact format.
-    *Use case:* Keeping a record of current events serving as a time-capsule of humanity. (Inspired by [WaybackMachine](https://archive.org/web/))
-
+    
+* Archival of hefty media in an extremely compact format.(See [WaybackMachine](https://archive.org/web/))
+    *Use case:* Keeping a record of current events serving as a time-capsule of humanity.
+    
 ## Approach
+<img src="https://github.com/tejasvi/AI_Hackathon/raw/master/overview.svg?sanitize=true">
 
-We are taking a audio clip and preprocessing it to make 2D image like array.
-This 2D like array is converted into spectrogram.
-This spectrogram is then fed into a CNN for the classifcation.
-After the classification,if the audio file contained any human speech,its description is printed out.
+* The audio is first converted to WAV format which is the uncompressed form.
+
+* The audio is then converted into a spectrogram which is the visual representation of sound frequencies.
+
+* The spectrograms can then be treated as images where we can benefit from transfer learning using pretrained models (like Resnet).
+
+* After being fed separatly to classification and speech recognition network, appropriate keyword description is generated.
+
+* The obtained keywords can further be used to generate readable sentences using [NLG](https://en.wikipedia.org/wiki/Natural-language_generation). However it proved to be much tedious to prototype.
+
+<img src="https://github.com/tejasvi/AI_Hackathon/raw/master/planned.svg?sanitize=true">
+
+
+* The problem scope can be extended to object level reseasoning in images. This will provide more context to the description by using videos along with audio.
+ 
 
 ## Implementation
 
-The dataset we used in this project was downloaded from Kaggle - **FSDKaggle2019**, and it employs audio clips from the following sources:
 
-Freesound Dataset (FSD): a dataset being collected at the MTG-UPF based on Freesound content organized with the AudioSet Ontology
-The soundtracks of a pool of Flickr videos taken from the Yahoo Flickr Creative Commons 100M dataset (YFCC)
+### Data and preprocessing
 
-This dataset has around 24,500 audio clips in training set in two folders spanning from 2 seconds to 19 seconds and another 5000 in test set,and it has 80 classes(types) of Sound ranging from *Waves_and_surf* to *Toilet_flush* and also has 5 classes of human audio files!
+The dataset used in this project is [Freesound Audio Tagging](https://arxiv.org/pdf/1906.02975) which contains snippets of audio with sound type labels.
 
-The size of entire dataset is 24.4 GB without extraction,therefore we are using a smaller dataset
-(4-4.5GB) to show our prototype beccause of time and disk space in Google Colabarotory constraints.
+The sounds are further divided into ~11 hr *curated* set and ~80 hr *noisy* set. We used only curated set for training due to resource constraints and for stronger transfer learning demonstration.
 
-Each audio file is converted into 128 x L, L is audio seconds x 128; [128, 256] if sound is 2s long.
+For spectrogram generation, widely used librosa library is used. Each audio of length *n* seconds is converted into 128x128n grayscale image.
 
 
-We also make use of librosa library which is specialize for audio for our preprocessing audio to spectrograph
+There are 80 possible labels inlcuding *Gasp,Printer, Gong, Bark, Male singing,etc*. The audio falling in human voice category are fed to speech recognition model.
 
-We use pretrained resnet.18 trained on Imagenet for the classification where we make use of **transfer learning** to iniatilize parameters in our model and fine tune the last few layers to specialize our model in learning to classify the spectrograms.
+### Architecture
 
-After trainig,the audio file is classifed from one of the 80 different classes,if it is from any of the following classes
-**Child_speech_and_kid_speaking**
-**Male_singing**
-**Male_speech_and_man_speaking **
-**Female_singing**
-**Female_speech_and_woman_speaking**
+For classification, ResNet18 architecture pre-trained for ImageNet is used. The evaluation metric used is [LwLRAP](https://www.kaggle.com/pkmahan/understanding-lwlrap) which is believed to be most effective and widely used with spectrograms.
 
-We send the audio clip to our second Model specialized in Speech to Text Generation **DeepSpeech**
-which gives back Description of the audio spoken.
+Speech recognition uses [DeepSpeech](https://github.com/mozilla/DeepSpeech) architecture published by Mozilla. 
+
+### Transfer learning
+
+The parameters of ResNet18 are initialized for ImageNet dataset instead of being random. The random initialization demonstrably converged slower than intializion to ImageNet weights.
+
+#### Random Initialization
+<img src="https://github.com/tejasvi/AI_Hackathon/raw/master/random_init.JPG?sanitize=true">
+
+#### ImageNet Initialization
+<img src="https://github.com/tejasvi/AI_Hackathon/raw/master/img_init.JPG?sanitize=true">
+
+## Execution
+
+See `main.ipynb`. The trained model was saved while training and is loaded during inference only. As a prototype, currently audio files are transcribed only after complete processing. The classification and speech recognition can be run parallely for real-time processing. Though for simplicity currently it runs in sequence.
